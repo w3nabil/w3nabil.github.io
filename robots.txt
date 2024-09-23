@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /src/*
 Disallow: /src/
 
-Sitemap: https://w3nabil.github.io/portfolio/sitemap.xml
+Sitemap: https://w3nabil.github.io/sitemap.xml
