@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /src/*
+Disallow: /src/
+
+Sitemap: https://w3nabil.github.io/portfolio/sitemap.xml
