@@ -23,7 +23,7 @@ function scrambleText(element, targetText) {
         }, 50);
     }
 
-    setTimeout(scramble, 1000);
+    setTimeout(scramble, 100);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nabil Islam</title>
     <link rel="x" href="">
-    <link rel="icon" type="image/x-icon" href="./">
+    <link rel="icon" type="image/x-icon" href="./src/img/icon/webicon.webp">
     <link rel="stylesheet" href="./src/css/index.css">
     <noscript>
         <meta http-equiv="refresh" content="0; url=https://w3nabil.github.io/nojs.html" />
@@ -13,391 +14,862 @@
     <script src="./src/js/hrefmobile.js"></script>
     <script src="./src/js/index.js"></script>
     <script src="./src/js/scramble.js"></script>
-    <meta name="title" content="NABIL ISLAM ">
-    <meta name="description" content="NABIL ISLAM a.k.a w3nabil is a certified Python programmer, who is currently studying at university and likes to talk about creative security ideas.">
-    <meta name="keywords" content="nabil islam, nabil, w3nabil">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="1 days">
-    <meta name="author" content="NABIL ISLAM">
+    <title>NABIL ISLAM | ETHICAL HACKER</title>
+    <meta name="title" content="NABIL ISLAM | ETHICAL HACKER" />
+    <meta name="description"
+        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://w3nabil.github.io/" />
+    <meta property="og:title" content="NABIL ISLAM | ETHICAL HACKER" />
+    <meta property="og:description"
+        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
+    <meta property="og:image" content="https://w3nabil.github.io/src/img/social/web_preview.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://w3nabil.github.io/" />
+    <meta property="twitter:title" content="NABIL ISLAM | ETHICAL HACKER" />
+    <meta property="twitter:description"
+        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
+    <meta property="twitter:image" content="https://w3nabil.github.io/src/img/social/web_preview.webp" />
+    <meta name="keywords" content="nabil islam, nabil, w3nabil" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="author" content="NABIL ISLAM" />
 </head>
+
 <body>
-    <div id="preloader"></div>
-    <div class="container">
-        <!-- Display 1 -->
-         <div class="display1">
-            <div class="picture">
-                <img src="./src/img/profile/webprofile.jpg" alt="Avatar" style="width: 250px; height: 250px; margin-top: 100px; border-radius: 50%; border: 1px solid #20C20E;">
-            </div>
-            <div class="name">
-                <h1 class="scramble">Nabil Islam</h1>
-            </div>
-            <div class="highlighter">
-                <h3 class="scramble">Ethical Hacker</h3>
-            </div>
-            <div class="bio">
-                <p>"Greatness lies not in creation, but in taking responsibility and maintaining the creation."</p>
-            </div>
+    <!-- Loading Animation -->
+    <div class="loading-container" id="loadingScreen">
+        <pre class="loading-text" id="codeStream"></pre>
+        <span class="cursor"></span>
+    </div>
+    <div class="access-granted" id="accessGranted">ACCESS GRANTED</div>
 
-            <!-- Information --> 
-            <div class="information" style="text-align: left; margin-top: 40px;">
-                <div class="toggle-section">
-                    <button class="toggle-btn" onclick="toggleSection(this)">
-                        <span class="icon">📁</span>
-                        <span>Prefered Work Location</span>
-                    </button>
-                    <p class="extended-text">📁 Remote (Anywhere)</p>
+    <!-- Web Content -->
+    <div class="web-content" id="webContent">
+        <div class="container">
+            <!-- Display 1 -->
+            <div class="display1">
+                <div class="picture">
+                    <img src="./src/img/profile/nabil_web_pic.webp" alt="Avatar"
+                        style="width: 250px; height: 250px; margin-top: 50px; border-radius: 50%; border: 1px solid #20C20E;">
+                </div>
+                <div class="name">
+                    <h1 class="scramble">Nabil Islam</h1>
+                </div>
+                <div class="highlighter">
+                    <h3 class="scramble">Ethical Hacker</h3>
+                    <h3 class="scramble">Community Administrator</h3>
+                </div>
+                <div class="bio">
+                    <p>"Greatness lies not in creation, but in taking responsibility and maintaining the creation."</p>
                 </div>
 
-                <div class="toggle-section">
-                    <button class="toggle-btn" onclick="toggleSection(this)">
-                        <span class="icon">📁</span>
-                        <span>Current City</span>
-                    </button> 
-                    <p class="extended-text">📁 Dhaka, Bangladesh</p>
-                </div>
-
-                <div class="toggle-section">
-                    <button class="toggle-btn" onclick="toggleSection(this)">
-                        <span class="icon">📁</span>
-                        <span>Languages</span>
-                    </button> 
-                    <p class="extended-text">📁 English<br>📁 Bangla</p>
-                </div>
-
-                <div class="social-icon" style="width: 100%; text-align: center; margin-top: 40px;">
-                    <a href="http://github.com/w3nabil" target="_blank" rel="noopener noreferrer"><img src="./src/img/social/github.png"/></a>
-                    <a href="http://linkedin.com/in/w3nabil" target="_blank" rel="noopener noreferrer"><img src="./src/img/social/linkedin.png"/></a>
-                    <a href="http://facebook.com/w3nabil" target="_blank" rel="noopener noreferrer"><img src="./src/img/social/facebook.png"/></a>
-                    <a href="mailto:w3nabil@gmail.com" target="_blank" rel="noopener noreferrer"><img src="./src/img/social/email.png"/></a>
-                </div>
-
-                <div class="copyright" style="text-align: center;">
-                    <p>© 2024 Nabil Islam. All rights reserved.</p>
-                </div>
-            </div>
-         </div>
-        <!-- Display 2 -->
-         <div class="display2">
-            <!-- Navbar -->
-            <div class="navbar">
-                <ul type="none" id="navlist">
-                    <li class="active"><button data-target="education_page" onclick="navActive(this)" type="button"><a href="#education_page">📁 (nabil㉿web)-[~/Education]</a></button></li>
-                    <li><button data-target="certificate_page" onclick="navActive(this)" type="button"><a href="#certificate_page">📁 (nabil㉿web)-[~/Certificates]</a></button></li>
-                    <li><button data-target="skill_page" onclick="navActive(this)" type="button"><a href="#skill_page">📁 (nabil㉿web)-[~/Skills]</a></button></li>
-                </ul>
-            </div>
-            <div class="content" id="content">
-                
-                <!-- Education Page -->
-                <div class="education-page active" id="education_page">
-                    <div class="education-container">
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Higher Secondary School</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <p>Motijheel Govt. Boys High School, Dhaka</p>
-                                    <p>Subject/Major : Science</p>
-                                    <p>Session : 2022-2023</p>
-                                    <p>Result : GPA 5.00 out of GPA 5.00</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Secondary School</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <p>RAJDHANI IDEAL COLLEGE, Dhaka</p>
-                                    <p>Subject/Major : Science</p>
-                                    <p>Session : 2020-2021</p>
-                                    <p>Result : GPA 5.00 out of GPA 5.00</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Junior School</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <p>RAJDHANI IDEAL COLLEGE, Dhaka</p>
-                                    <p>Subject/Major : General</p>
-                                    <p>Session : 2019</p>
-                                    <p>Result : GPA 5.00 out of GPA 5.00</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="education end-education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Primary School</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <p>RAJDHANI IDEAL COLLEGE, Dhaka</p>
-                                    <p>Subject/Major : General</p>
-                                    <p>Session : 2016</p>
-                                    <p>Result : GPA 5.00 out of GPA 5.00</p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="notice">
-                            <p>⚠️ All the above information is verified by the concerned institution and Ministry of Education.<br>⚠️ For security reasons, The Examination Roll, Registration number, and the Parent's name can not be provided on the Website.<br></p>
-                        </div>
+                <!-- Information -->
+                <div class="information" style="text-align: left; margin-top: 40px;">
+                    <div class="toggle-section">
+                        <button class="toggle-btn" onclick="toggleSection(this)">
+                            <span class="icon">📁</span>
+                            <span>&nbsp;> Prefered Work Location</span>
+                        </button>
+                        <p class="extended-text">🌎 Remote (Anywhere)</p>
                     </div>
-                </div>
 
-                <!-- Certificate Page -->
-                <div class="certificate-page" id="certificate_page">
-                    <div class="certificate-container">
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Cyber Security</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <img src="./src/img/cer/cybersecurity.jpg" alt="" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Responsive Web Design</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <img src="./src/img/cer/responsiveweb.png" alt="" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Professional Python</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <img src="./src/img/cer/pythonpro.jpg" alt="" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Python OOP</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <img src="./src/img/cer/pythonoop.jpg" alt="" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h2>
-                                        <span class="h2-d1">📁</span>
-                                        |
-                                        <span class="h2-d2">Digital Marketing Specialist</span>
-                                    </h2>
-                                </div>
-                                <div class="education-details">
-                                    <img src="./src/img/cer/digitalmarketing.jpg" alt="" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="toggle-section">
+                        <button class="toggle-btn" onclick="toggleSection(this)">
+                            <span class="icon">📁</span>
+                            <span>&nbsp;> Current City</span>
+                        </button>
+                        <p class="extended-text">📌 Dhaka, Bangladesh</p>
                     </div>
-                </div>
 
-                <!-- Skill Page -->
-                <div class="skill-page" id="skill_page">
-                    <div class="skill-container">
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Python (Programming Language)</span>
-                                <span id="skillrating1">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress1" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Javascript (Programming Language)</span>
-                                <span id="skillrating2">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress2" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Object-Oriented Programming (OOP)</span>
-                                <span id="skillrating3">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress3" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Vulnerability Assessment and Penetration Testing</span>
-                                <span id="skillrating4">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress4" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Reverse Engineering</span>
-                                <span id="skillrating5">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress5" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Social Engineering </span>
-                                <span id="skillrating6">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress6" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Cybersecurity</span>
-                                <span id="skillrating7">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress7" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Operating System (OS) Knowledge</span>
-                                <span id="skillrating8">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress8" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Digital Marketing</span>
-                                <span id="skillrating9">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress9" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Community Administration</span>
-                                <span id="skillrating10">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress10" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Customer Support</span>
-                                <span id="skillrating11">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress11" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Search Engine Optimization (SEO)</span>
-                                <span id="skillrating12">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress12" style="width: 0;"></div>
-                            </div>
-                        </div>
-                
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Project Management</span>
-                                <span id="skillrating13">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress13" style="width: 0;"></div>
-                            </div>
-                        </div>
+                    <div class="toggle-section">
+                        <button class="toggle-btn" onclick="toggleSection(this)">
+                            <span class="icon">📁</span>
+                            <span>&nbsp;> Languages</span>
+                        </button>
+                        <p class="extended-text">🗪 English<br>🗪 Bangla</p>
+                    </div>
+
+                    <div class="social-icon" style="width: 100%; text-align: center; margin-top: 40px;">
+                        <a href="http://github.com/w3nabil" target="_blank" rel="noopener noreferrer"><img
+                                src="./src/img/social/github.png" /></a>
+                        <a href="http://linkedin.com/in/w3nabil" target="_blank" rel="noopener noreferrer"><img
+                                src="./src/img/social/linkedin.png" /></a>
+                        <a href="http://facebook.com/w3nabil" target="_blank" rel="noopener noreferrer"><img
+                                src="./src/img/social/facebook.png" /></a>
+                        <a href="mailto:w3nabil@gmail.com" target="_blank" rel="noopener noreferrer"><img
+                                src="./src/img/social/email.png" /></a>
+                    </div>
+
+                    <div class="copyright" style="text-align: center;">
+                        <p>© 2025 Nabil Islam. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-         </div>
+            <!-- Display 2 -->
+            <div class="display2">
+                <!-- Navbar -->
+                <div class="navbar">
+                    <ul type="none" id="navlist">
+                        <li class="active"><button data-target="biography_page" onclick="navActive(this)"
+                                type="button"><a href="#biography">🖥️ > NABIL > BIOGRAPHY</a></button></li>
+                        <li><button data-target="education_page" onclick="navActive(this)" type="button"><a
+                                    href="#education_page">🖥️ > NABIL > EDUCATION</a></button></li>
+                        <li><button data-target="certificate_page" onclick="navActive(this)" type="button"><a
+                                    href="#certificate_page">🖥️ > NABIL > CERTIFICATES</a></button></li>
+                        <li><button data-target="skill_page" onclick="navActive(this)" type="button"><a
+                                    href="#skill_page">🖥️ > NABIL > SKILLS</a></button></li>
+                    </ul>
+                </div>
+                <div class="content" id="content">
+                    <!-- Biography Page -->
+                    <div class="biography-page active" id="biography_page">
+                        <div class="biography-container">
+                            <div class="biography">
+                                <div class="biography-text-1">
+                                    <h1 class="mars-header"># ABOUT NABIL</h1>
+                                    <div class="about-nabil">
+                                        <p class="about-nabil-para-1"><b>Nabil Islam</b> (also known as w3nabil, born
+                                            2006) is a dedicated high school graduate with a strong passion for the
+                                            ethical hacking. Starting at the age of 15, Nabil gained valuable experience
+                                            working with several prestigious online game communities, including Hyper
+                                            Front, Dead by Daylight Mobile (Netease), and NEW STATE MOBILE, among
+                                            others. This marked the beginning of his career in community management,
+                                            where he started as a part-time professional.</p>
+                                        <p class="about-nabil-para-2">In 2022, Nabil paused his professional journey to
+                                            focus on his secondary school examinations. During this time, he committed
+                                            himself to academic excellence and achieved outstanding results, obtaining a
+                                            GPA of 5.00 out of 5.00 in both his secondary and higher secondary exams.
+                                        </p>
+                                        <p class="about-nabil-para-3">Following his higher secondary exams, Nabil faced
+                                            significant financial challenges that threatened his ability to pursue
+                                            university education.</p>
+                                    </div>
+                                </div>
+                                <div class="biography-text-2"></div>
+                                <div class="biography-text-3"></div>
+                                <div class="biography-employment">
+                                    <h1 class="mars-header"># Employment History</h1>
+                                    <table class="employment-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Company</th>
+                                                <th>Location</th>
+                                                <th>Position</th>
+                                                <th>Project</th>
+                                                <th>Duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td rowspan="2">Guangzhou GoodGamy Internet Technology Co., Ltd</td>
+                                            <td rowspan="2">China (Remote from Bangladesh)</td>
+                                            <td rowspan="3">Community Manager</td>
+                                            <td>Hyper Front</td>
+                                            <td>Nov 2021 - Oct 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dead by Day Light Mobile SEA</td>
+                                            <td>Sep 2021 - Oct 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TapTap</td>
+                                            <td>China (Remote from Bangladesh)</td>
+                                            <td>Community Operation</td>
+                                            <td>Sep 2021 - Jul 2022</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="biography-researches">
+                                    <h1 class="mars-header"># RESEARCHES</h1>
+                                    <table class="research-table">
+                                        <th>Title</th>
+                                        <th>Research Area</th>
+                                        <th>Current Status</th>
+                                        <th>Completion Year</th>
+                                        <tr>
+                                            <td>Gmail Spam Detection Bypass</td>
+                                            <td>Cybersecurity, Ethical Hacking</td>
+                                            <td>Completed (Passed)</td>
+                                            <td>2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>XST, Host Header Injection, and Clickjacking Scanner</td>
+                                            <td>Cybersecurity, Ethical Hacking</td>
+                                            <td>Completed (Passed)</td>
+                                            <td>2025</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="biography-publications"></div>
+                                <div class="biography-awards">
+                                    <h1 class="mars-header"># Awards</h1>
+                                    <table class="award-table" border="1">
+                                        <th>Year</th>
+                                        <th>Award</th>
+                                        <th>Country</th>
+                                        <th>Awarded By</th>
+                                        <tr>
+                                            <td class="award-year">2024</td>
+                                            <td>Meritorious Student</td>
+                                            <td rowspan="4">Bangladesh</td>
+                                            <td>Motijheel Govt. Boys High School</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="award-year">2022</td>
+                                            <td>Meritorious Student</td>
+                                            <td rowspan="3">Rajdhani Ideal College</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="award-year">2019</td>
+                                            <td>Meritorious Student</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="award-year">2016</td>
+                                            <td>Meritorious Student</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="biography-socialactivities">
+                                    <h1 class="mars-header"># SOCIAL ACTIVITIES</h1>
+                                    <table class="socialactivities-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Organization</th>
+                                                <th>Country</th>
+                                                <th>Role/Position</th>
+                                                <th>Activity Description</th>
+                                                <th>Duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>Bangladesh Scouts (Rover Unit)</td>
+                                            <td>Bangladesh</td>
+                                            <td>Rover</td>
+                                            <td class="activity-description">Participated in community service,
+                                                environmental conservation, and disaster relief initiatives. Engaged in
+                                                leadership training and adventure scouting programs.</td>
+                                            <td>2024 - present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Local Disaster Relief Team</td>
+                                            <td>Bangladesh</td>
+                                            <td>Volunteer</td>
+                                            <td class="activity-description">Helped in flood relief operations by
+                                                distributing food, medical supplies, and shelter assistance.</td>
+                                            <td>2022 - present</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="biography-hobbies">
+                                    <h1 class="mars-header"># Hobbies & Interests</h1>
+                                    <div class="hobby-two-list">
+                                        <ul type="square" class="hobby-list">
+                                            <li>🎲 Board Games
+                                                <ul class="hobby-sublist">
+                                                    <li>Chess</li>
+                                                    <li>Poker</li>
+                                                    <li>UNO</li>
+                                                </ul>
+                                            </li>
+                                            <li>👨🏻‍🍳 Culinary Arts
+                                                <ul class="hobby-sublist">
+                                                    <li>Gourmet Cooking</li>
+                                                    <li>Experimental Recipes</li>
+                                                    <li>International Cuisine</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="hobby-list">
+                                            <li>⚽ Football Enthusiast
+                                                <ul class="hobby-sublist">
+                                                    <li>Real Madrid CF</li>
+                                                    <li>Tottenham Hotspur F.C.</li>
+                                                    <li>Manchester City F.C.</li>
+                                                </ul>
+                                            </li>
+                                            <li>📖 Literature & Reading
+                                                <ul class="hobby-sublist">
+                                                    <li>Science fiction</li>
+                                                    <li>Mystery & Thriller</li>
+                                                    <li>Classic Novels</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education Page -->
+                    <div class="education-page" id="education_page">
+                        <div class="education-container">
+                            <div class="education">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Higher Secondary</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <table class="education-details-table">
+                                            <tr>
+                                                <td class="edu-det-info">Institution</td>
+                                                <td>Motijheel Govt. Boys High School, Dhaka</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Subject/Major</td>
+                                                <td>Science</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Session</td>
+                                                <td>2022-2023</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Overall Result</td>
+                                                <td>GPA 5.00 out of GPA 5.00</td>
+                                            </tr>
+                                        </table>
+                                        <div class="result-sum">
+                                            <table class="result-table">
+                                                <th colspan="2">Result Summary (GPA)</th>
+                                                <tr>
+                                                    <td>Subject</td>
+                                                    <td>Grade</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Physics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chemistry</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Biology</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Higher Mathematics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="education">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Secondary School</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <table class="education-details-table">
+                                            <tr>
+                                                <td class="edu-det-info">Institution</td>
+                                                <td>Rajdhani Ideal College, Dhaka</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Subject/Major</td>
+                                                <td>Science</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Session</td>
+                                                <td>2020-2021</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Overall Result</td>
+                                                <td>GPA 5.00 out of GPA 5.00</td>
+                                            </tr>
+                                        </table>
+                                        <div class="result-sum">
+                                            <table class="result-table">
+                                                <th colspan="2">Result Summary (GPA)</th>
+                                                <tr>
+                                                    <td>Subject</td>
+                                                    <td>Grade</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Physics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chemistry</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Biology</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Higher Mathematics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="education">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Junior School</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <table class="education-details-table">
+                                            <tr>
+                                                <td class="edu-det-info">Institution</td>
+                                                <td>Rajdhani Ideal College, Dhaka</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Subject/Major</td>
+                                                <td>General</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Session</td>
+                                                <td>2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Overall Result</td>
+                                                <td>GPA 5.00 out of GPA 5.00</td>
+                                            </tr>
+                                        </table>
+                                        <div class="result-sum">
+                                            <table class="result-table">
+                                                <th colspan="2">Result Summary (GPA)</th>
+                                                <tr>
+                                                    <td>Subject</td>
+                                                    <td>Grade</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>History</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>English</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>General Science</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mathematics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="education end-education">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Primary School</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <table class="education-details-table">
+                                            <tr>
+                                                <td class="edu-det-info">Institution</td>
+                                                <td>Rajdhani Ideal College, Dhaka</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Subject/Major</td>
+                                                <td>General</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Session</td>
+                                                <td>2016</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="edu-det-info">Overall Result</td>
+                                                <td>GPA 5.00 out of GPA 5.00</td>
+                                            </tr>
+                                        </table>
+                                        <div class="result-sum">
+                                            <table class="result-table">
+                                                <th colspan="2">Result Summary (GPA)</th>
+                                                <tr>
+                                                    <td>Subject</td>
+                                                    <td>Grade</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>History</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>English</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>General Science</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mathematics</td>
+                                                    <td>5.00</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="notice">
+                                <p><span><b>Important Notice:</b></span> The authenticity of the above information has
+                                    been officially verified by the relevant institution, the Ministry of Education, and
+                                    the Ministry of Foreign Affairs. However, due to institutional security policies and
+                                    data protection regulations, digital copies of academic transcripts and certificates
+                                    cannot be shared or uploaded online.<br><br>
+                                    If you require access to these documents for academic or official purposes, please
+                                    contact me via email using your institutional or official work email address. Kindly
+                                    specify your credentials and the purpose of your request to facilitate a prompt and
+                                    appropriate response.<br></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Page -->
+                    <div class="certificate-page" id="certificate_page">
+                        <div class="certificate-container">
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Cyber Security</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/cybersecurity.jpg" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Responsive Web Design</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/responsiveweb.png" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Professional Python</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/pythonpro.jpg" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Python OOP</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/PythonOOP.jpg" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Digital Marketing Specialist</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/digitalmarketing.jpg" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <div class="card">
+                                    <div class="education-level">
+                                        <h2>
+                                            <span class="h2-d1">📁</span>
+                                            |
+                                            <span class="h2-d2">Advent of Cyber23</span>
+                                        </h2>
+                                    </div>
+                                    <div class="education-details">
+                                        <img src="./src/img/cer/adventcyber2023.webp" alt="" height="auto" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Page -->
+                    <div class="skill-page" id="skill_page">
+                        <div class="skill-container">
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Python (Programming Language)</span>
+                                    <span id="skillrating1">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress1" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Javascript (Programming Language)</span>
+                                    <span id="skillrating2">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress2" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Object-Oriented Programming (OOP)</span>
+                                    <span id="skillrating3">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress3" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Vulnerability Assessment and Penetration Testing</span>
+                                    <span id="skillrating4">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress4" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Reverse Engineering</span>
+                                    <span id="skillrating5">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress5" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Social Engineering </span>
+                                    <span id="skillrating6">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress6" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Cybersecurity</span>
+                                    <span id="skillrating7">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress7" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Operating System (OS) Knowledge</span>
+                                    <span id="skillrating8">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress8" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Digital Marketing</span>
+                                    <span id="skillrating9">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress9" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Community Administration</span>
+                                    <span id="skillrating10">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress10" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Customer Support</span>
+                                    <span id="skillrating11">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress11" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Search Engine Optimization (SEO)</span>
+                                    <span id="skillrating12">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress12" style="width: 0;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill-header">
+                                    <span>Project Management</span>
+                                    <span id="skillrating13">0 / 10</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="skillprogress13" style="width: 0;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        var preloadweb = document.getElementById("preloader");
+        const codeLines = [
+            "Please enter the password to continue...",
+            "Connecting to 10.10.56.87...",
+            "Generating temporary username with no password...",
+            "Establishing secure connection...",
+            "Fetching Nabil's information...",
+            "Trying to access the system...",
+        ];
 
-        window.addEventListener("load", function(){
-            preloadweb.style.display = "none";
-        });
+        const actualCodeSnippets = [
+            "> ssh root@w3nabil.github.io -p 22",
+            "> *******",
+            "Successfully connected. \n> sudo python3 generate.py",
+            "Username : viewer \n> ssh viewer@w3nabil.github.io -p 22",
+            "> sudo python3 whoisnabil.py",
+            "> sudo python3 access.py --username viewer --password ******** --type web --action read",
+        ];
 
-        console.log("Successfully Loaded the website!");
+        const streamElement = document.getElementById("codeStream");
+        const webContent = document.getElementById("webContent");
+        let index = 0;
+
+        // Simulate typing effect for code snippets
+        function typeText(text, element, callback) {
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text[i];
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                    if (callback) callback();
+                }
+            }, 10); // Adjust typing speed here
+        }
+
+        // Increment percentage from 1% to 100%
+        function incrementPercentage(element, callback) {
+            let percent = 1;
+            const interval = setInterval(() => {
+                if (percent <= 100) {
+                    // Replace the percentage in the last line
+                    const lines = element.textContent.split("\n");
+                    lines[lines.length - 1] = lines[lines.length - 1].replace(/\d+%/, `${percent}%`);
+                    element.textContent = lines.join("\n");
+                    percent++;
+                } else {
+                    clearInterval(interval);
+                    if (callback) callback();
+                }
+            }, 1); // Adjust speed of percentage increment here (3ms per step)
+        }
+
+        // Main function to simulate hacking process
+        function simulateHacking() {
+            if (index < codeLines.length) {
+                // First, type the code snippet on a new line
+                typeText(actualCodeSnippets[index] + "\n", streamElement, () => {
+                    // Then, add the code line with percentage on a new line
+                    streamElement.textContent += codeLines[index] + " [1%]";
+                    // Increment the percentage
+                    incrementPercentage(streamElement, () => {
+                        // Move to the next line
+                        streamElement.textContent += "\n";
+                        index++;
+                        simulateHacking(); // Move to the next line
+                    });
+                });
+            } else {
+                // After all lines are done, show "ACCESS GRANTED"
+                setTimeout(() => {
+                    document.getElementById("loadingScreen").style.animation = "fadeOut 1s forwards";
+                    setTimeout(() => {
+                        document.getElementById("accessGranted").style.display = "block";
+                        setTimeout(() => {
+                            document.getElementById("accessGranted").style.display = "none";
+                            // Hide the loading screen and show the web content
+                            document.getElementById("loadingScreen").style.display = "none";
+                            document.getElementById("webContent").style.display = "block";
+                        }, 2000); // Wait for 3 seconds before showing content
+                    }, 1000); // Wait for 0.5 second before showing "ACCESS GRANTED"
+                }, 500); // Wait for 0.5 seconds before starting the fade-out
+            }
+        }
+
+        // Initialize
+        simulateHacking();
     </script>
 </body>
+
 </html>

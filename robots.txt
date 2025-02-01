@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /src/*
 Disallow: /src/
+Disallow: /m/src/*
+Disallow: /m/src/
 
 Sitemap: https://w3nabil.github.io/sitemap.xml
