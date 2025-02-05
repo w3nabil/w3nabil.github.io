@@ -1,4 +1,4 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 function scrambleText(element, targetText) {
     let iteration = 0;
@@ -23,12 +23,30 @@ function scrambleText(element, targetText) {
         }, 50);
     }
 
-    setTimeout(scramble, 100);
+    setTimeout(scramble, 150);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll('.scramble');
+function startScrambleEffect(container) {
+    const elements = container.querySelectorAll('.scramble');
     elements.forEach((element) => {
         scrambleText(element, element.innerText);
     });
+}
+
+function observeVisibility(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+
+    const observer = new MutationObserver(() => {
+        if (getComputedStyle(targetElement).display === 'block') {
+            observer.disconnect(); 
+            startScrambleEffect(targetElement); 
+        }
+    });
+
+    observer.observe(targetElement, { attributes: true, attributeFilter: ['style'] });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    observeVisibility('webContent');
 });

@@ -1,7 +1,7 @@
 User-agent: *
-Disallow: /src/*
+Disallow: 
+Crawl-delay: 10
+Disallow: /cgi-bin/
 Disallow: /src/
-Disallow: /m/src/*
 Disallow: /m/src/
-
 Sitemap: https://w3nabil.github.io/sitemap.xml
