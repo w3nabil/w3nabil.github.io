@@ -1,882 +1,450 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nabil Islam</title>
-    <link rel="preload" href="./src/css/index.css" as="style" />
-    <link rel="preload" href="./src/js/index.js" as="script" />
-    <script src="./src/js/index.js" defer></script>
-    <link rel="preload" href="../../../src/img/profile/nabil_web_pic.webp" as="image" />
-    <link rel="icon" type="image/x-icon" href="../../../src/img/icon/webicon.webp" />
-    <link rel="stylesheet" href="./src/css/index.css" />
-    <title>NABIL ISLAM | ETHICAL HACKER</title>
-    <meta name="title" content="NABIL ISLAM | ETHICAL HACKER" />
-    <meta name="description"
-        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://w3nabil.github.io/" />
-    <meta property="og:title" content="NABIL ISLAM | ETHICAL HACKER" />
-    <meta property="og:description"
-        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
-    <meta property="og:image" content="https://w3nabil.github.io/src/img/social/web_preview.webp" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://w3nabil.github.io/" />
-    <meta property="twitter:title" content="NABIL ISLAM | ETHICAL HACKER" />
-    <meta property="twitter:description"
-        content="Nabil Islam (also known as w3nabil) is a dedicated high school graduate with a strong passion for ethical hacking." />
-    <meta property="twitter:image" content="https://w3nabil.github.io/src/img/social/web_preview.webp" />
-    <meta name="keywords" content="nabil islam, nabil, w3nabil" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="author" content="NABIL ISLAM" />
-    <link rel="canonical" href="https://w3nabil.github.io/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Under Maintenance</title>
+    <meta name="description" content="System undergoing scheduled maintenance." />
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --fg: #e6ffe6;
+            --neon: #20C20E;
+            /* Hacker green */
+            --accent: #00ffaa;
+            --dim: #114d11;
+            --danger: #ff2d55;
+        }
 
-    <!--SCHEMA-->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Nabil Islam",
-      "url": "https://w3nabil.github.io/",
-      "image": "https://w3nabil.github.io/src/img/profile/nabil_web_pic.webp",
-      "jobTitle": "Ethical Hacker",
-      "sameAs": [
-        "https://www.facebook.com/w3nabil/",
-        "https://github.com/w3nabil",
-        "https://instagram.com/w3nabil",
-        "https://linkedin.com/in/w3nabil",
-        "https://www.youtube.com/@w3nabil"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "w3nabil",
-      "url": "https://w3nabil.github.io/",
-      "image": "https://w3nabil.github.io/src/img/profile/nabil_web_pic.webp",
-      "jobTitle": "Ethical Hacker",
-      "sameAs": [
-        "https://www.facebook.com/w3nabil/",
-        "https://github.com/w3nabil",
-        "https://instagram.com/w3nabil",
-        "https://linkedin.com/in/w3nabil",
-        "https://www.youtube.com/@w3nabil"
-      ]
-    }
-    </script>
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font: 16px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+            overflow: hidden;
+            /* keep matrix smooth */
+        }
+
+        /* Matrix canvas behind everything */
+        #matrix {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            display: block;
+            filter: brightness(0.7) saturate(1.2) blur(0.2px);
+        }
+
+        /* Subtle CRT scanlines + vignette */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at center, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.35) 100%),
+                repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04) 1px, transparent 2px, transparent 4px);
+            mix-blend-mode: overlay;
+        }
+
+        .wrap {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            padding: 28px;
+        }
+
+        .card {
+            width: min(760px, 92vw);
+            background: rgba(10, 10, 10, 0.65);
+            border: 1px solid var(--dim);
+            border-radius: 18px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 0 1px rgba(32, 194, 14, 0.2), 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 28px 24px 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::after {
+            /* glowing border sweep */
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 20px;
+            pointer-events: none;
+            background: conic-gradient(from 0deg, transparent 0 75%, rgba(32, 194, 14, .25) 85%, transparent 100%);
+            animation: border-sweep 3.5s linear infinite;
+            mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+            -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: xor;
+        }
+
+        @keyframes border-sweep {
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 8px;
+            color: var(--neon);
+            text-shadow: 0 0 6px rgba(32, 194, 14, .7);
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--neon);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(32, 194, 14, .35) inset, 0 0 10px rgba(32, 194, 14, .35);
+            font-weight: 700;
+        }
+
+        .glitch {
+            position: relative;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: .02em;
+            color: var(--neon);
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            clip-path: inset(0 0 0 0);
+        }
+
+        .glitch::before {
+            color: #0ff;
+            transform: translate(2px, 0);
+            animation: shift 2.2s infinite linear alternate-reverse;
+            opacity: .8
+        }
+
+        .glitch::after {
+            color: #f0f;
+            transform: translate(-2px, 0);
+            animation: shift 2.2s infinite linear alternate;
+            opacity: .6
+        }
+
+        @keyframes shift {
+            0% {
+                clip-path: inset(0 0 85% 0)
+            }
+
+            10% {
+                clip-path: inset(0 0 20% 0)
+            }
+
+            20% {
+                clip-path: inset(65% 0 0 0)
+            }
+
+            40% {
+                clip-path: inset(10% 0 30% 0)
+            }
+
+            60% {
+                clip-path: inset(40% 0 10% 0)
+            }
+
+            80% {
+                clip-path: inset(5% 0 60% 0)
+            }
+
+            100% {
+                clip-path: inset(0 0 85% 0)
+            }
+        }
+
+        .subtitle {
+            color: #b6ffb6;
+            opacity: .9;
+            margin: .35rem 0 1rem
+        }
+
+        .terminal {
+            background: #000;
+            border: 1px solid var(--dim);
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: #d1ffd1;
+            min-height: 74px;
+            box-shadow: 0 0 0 1px rgba(32, 194, 14, .15) inset;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prompt {
+            color: var(--accent)
+        }
+
+        .caret {
+            display: inline-block;
+            width: 8px;
+            height: 1.2em;
+            background: var(--neon);
+            margin-left: 4px;
+            box-shadow: 0 0 8px rgba(32, 194, 14, .8);
+            animation: blink 1s steps(1) infinite;
+            vertical-align: -.2em;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: .9rem 0 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--neon);
+            color: var(--neon);
+            background: transparent;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(32, 194, 14, .2) inset, 0 0 10px rgba(32, 194, 14, .2);
+            transition: transform .15s ease, background .2s ease, color .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: rgba(32, 194, 14, .08);
+        }
+
+        .btn.secondary {
+            border-color: #0ff;
+            color: #0ff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, .2) inset, 0 0 10px rgba(0, 255, 255, .2)
+        }
+
+        .status {
+            margin-top: 14px;
+            font-size: 12px;
+            color: #9be79b;
+            opacity: .9;
+            letter-spacing: .02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--neon);
+            box-shadow: 0 0 10px rgba(32, 194, 14, .8)
+        }
+
+        .progress {
+            --size: 86px;
+            --stroke: 8px;
+            position: relative;
+            width: var(--size);
+            height: var(--size);
+            margin-left: auto;
+        }
+
+        .progress svg {
+            transform: rotate(-90deg)
+        }
+
+        .progress .bg {
+            stroke: #102610
+        }
+
+        .progress .fg {
+            stroke: var(--neon);
+            filter: drop-shadow(0 0 6px rgba(32, 194, 14, .6));
+            transition: stroke-dashoffset .5s ease;
+        }
+
+        .progress .label {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: var(--neon);
+            font-weight: 800;
+            text-shadow: 0 0 8px rgba(32, 194, 14, .6);
+        }
+
+        footer {
+            position: fixed;
+            inset: auto 12px 10px;
+            z-index: 2;
+            font-size: 12px;
+            opacity: .7
+        }
+
+        /* Small screens */
+        @media (max-width:480px) {
+            .row {
+                justify-content: space-between
+            }
+
+            .progress {
+                margin: 10px 0 0 0
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Loading Animation -->
-    <div class="loading-container" id="loadingScreen">
-        <pre class="loading-text" id="codeStream"></pre>
-        <span class="cursor"></span>
-    </div>
-    <div class="access-granted" id="accessGranted">ACCESS<br>GRANTED</div> 
+    <canvas id="matrix" aria-hidden="true"></canvas>
+    <div class="overlay" aria-hidden="true"></div>
 
-    <!-- Web Content -->
-    <div class="web-content" id="webContent">
-        <div class="container" id="top">
-            <nav class="navbar">
-                <div class="logo">
-                    <h5>@w3nabil</h5>
-                </div>
-                <div class="burger" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <ul id="navlist">
-                    <li class="active"><button data-target="top" onclick="navActive(this)" type="button"><a
-                                href="#top">TOP</a></button></li>
-                    <li><button data-target="biography_page" onclick="navActive(this)" type="button"><a
-                                href="#biography_page">BIOGRAPHY</a></button></li>
-                    <li><button data-target="education_page" onclick="navActive(this)" type="button"><a
-                                href="#education_page">EDUCATION</a></button></li>
-                    <li><button data-target="certificate_page" onclick="navActive(this)" type="button"><a
-                                href="#certificate_page">CERTIFICATIONS</a></button></li>
-                    <li><button data-target="skill_page" onclick="navActive(this)" type="button"><a
-                                href="#skill_page">SKILLS</a></button></li>
-                </ul>
-            </nav>
-            <div class="landing">
-                <div class="picture">
-                    <img class="profile_picture" src="./src/img/nabil_web_pic.webp"
-                        alt="Avatar | Nabil" />
-                </div>
-                <div class="name">
-                    <h1 class="scramble">Nabil Islam</h1>
-                </div>
-                <div class="highlighter">
-                    <h3 class="role-typewriting"><span class="type-cursor">|</span></h3>
-                </div>
-                <div class="quote">
-                    <p><br><br><span class="color-red">"</span> Greatness lies not in creation, but in taking responsibility and
-                        maintaining the creation.<span class="color-red"> "</span><br><br></p>
-                </div>
-                <div class="social-icon">
-                    <a href="http://github.com/w3nabil" target="_blank" rel="noopener noreferrer"
-                        aria-label="Nabil | Github"><img src="../../../src/img/social/github.webp"
-                            alt="Github | Nabil" /></a>
-                    <a href="http://linkedin.com/in/w3nabil" target="_blank" rel="noopener noreferrer"
-                        aria-label="Nabil | Linkedin"><img src="../../../src/img/social/linkedin.webp"
-                            alt="Linkedin | Nabil" /></a>
-                    <a href="http://facebook.com/w3nabil" target="_blank" rel="noopener noreferrer"
-                        aria-label="Nabil | Facebook"><img src="../../../src/img/social/facebook.webp"
-                            alt="Facebook | Nabil" /></a>
-                    <a href="mailto:w3nabil@gmail.com" target="_blank" rel="noopener noreferrer"
-                        aria-label="Nabil | Mail"><img src="../../../src/img/social/email.webp"
-                            alt="Email | Nabil" /></a>
+    <main class="wrap" role="main">
+        <section class="card" aria-labelledby="title">
+            <div class="brand">
+                <div class="logo">NAB</div>
+                <div class="glitch" id="title" data-text="WAIT A MOMENT">WAIT A MOMENT
                 </div>
             </div>
-            <!-- Navbar -->
-            <div class="content" id="content">
-                <!-- Biography Page -->
-                <div class="biography-page active" id="biography_page">
-                    <div class="biography-container">
-                        <div class="biography">
-                            <div class="biography-text-1">
-                                <h2 class="mars-header"># ABOUT NABIL</h2>
-                                <div class="about-nabil">
-                                    <p class="about-nabil-para-1"><b>Nabil Islam</b> (also known as <b>w3nabil</b>, born
-                                        2006) is a dedicated high school graduate with a strong passion for the
-                                        ethical hacking. Starting at the age of 15, Nabil gained valuable experience
-                                        working with several prestigious online game communities, including <b>Hyper
-                                            Front</b>, <b>Dead by Daylight Mobile (Netease)</b>, and <b>NEW STATE
-                                            MOBILE</b>, among
-                                        others. This marked the beginning of his career in community management,
-                                        where he started as a part-time professional.</p>
-                                    <p class="about-nabil-para-2">In 2022, Nabil paused his professional journey to
-                                        focus on his secondary school examinations. During this time, he committed
-                                        himself to academic excellence and achieved outstanding results, obtaining a
-                                        GPA of 5.00 out of 5.00 in both his secondary and higher secondary exams.
-                                    </p>
-                                    <p class="about-nabil-para-3">Following his higher secondary exams, Nabil faced
-                                        significant financial challenges that threatened his ability to pursue
-                                        university education.</p>
-                                </div>
-                            </div>
-                            <div class="biography-text-2"></div>
-                            <div class="biography-text-3"></div>
-                            <div class="biography-employment">
-                                <h2 class="mars-header"># Employment History</h2>
-                                <table class="employment-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Company</th>
-                                            <th>Position</th>
-                                            <th>Project</th>
-                                            <th>Duration</th>
-                                        </tr>
-                                    </thead>
-                                    <tr>
-                                        <td rowspan="2">Guangzhou GoodGamy Internet Technology Co., Ltd</td>
-                                        <td rowspan="2">Community Manager</td>
-                                        <td>Hyper Front</td>
-                                        <td>Nov 2021 - Oct 2022</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dead by Day Light Mobile SEA</td>
-                                        <td>Sep 2021 - Oct 2022</td>
-                                    </tr>
-                                    <tr>
-                                        <td>TapTap</td>
-                                        <td>Community Manager</td>
-                                        <td>-</td>
-                                        <td>Sep 2021 - Jul 2022</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="biography-researches">
-                                <h2 class="mars-header"># RESEARCHES</h2>
-                                <table class="research-table">
-                                    <th>Title</th>
-                                    <th>Research Area</th>
-                                    <th>Current Status</th>
-                                    <th>Completion Year</th>
-                                    <tr>
-                                        <td>Gmail Spam Detection Bypass</td>
-                                        <td>Cybersecurity, Ethical Hacking</td>
-                                        <td>Completed (Passed)</td>
-                                        <td>2025</td>
-                                    </tr>
-                                    <tr>
-                                        <td>XST, Host Header Injection, and Clickjacking Scanning Script</td>
-                                        <td>Cybersecurity, Ethical Hacking</td>
-                                        <td>Completed (Passed)</td>
-                                        <td>2025</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="biography-publications"></div>
-                            <div class="biography-awards">
-                                <h2 class="mars-header"># Awards</h2>
-                                <table class="award-table" border="1">
-                                    <th>Year</th>
-                                    <th>Award</th>
-                                    <th>Country</th>
-                                    <th>Awarded By</th>
-                                    <tr>
-                                        <td class="award-year">2024</td>
-                                        <td>Meritorious Student</td>
-                                        <td rowspan="4">Bangladesh</td>
-                                        <td>Motijheel Govt. Boys High School</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="award-year">2022</td>
-                                        <td>Meritorious Student</td>
-                                        <td rowspan="3">Rajdhani Ideal College</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="award-year">2019</td>
-                                        <td>Meritorious Student</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="award-year">2016</td>
-                                        <td>Meritorious Student</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="biography-socialactivities">
-                                <h2 class="mars-header"># SOCIAL ACTIVITIES</h2>
-                                <table class="socialactivities-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Organization</th>
-                                            <th>Role/Position</th>
-                                            <th>Activity Description</th>
-                                            <th>Duration</th>
-                                        </tr>
-                                    </thead>
-                                    <tr>
-                                        <td>Bangladesh Scouts (Rover Unit)</td>
-                                        <td>Rover</td>
-                                        <td class="activity-description">Participated in community service,
-                                            environmental conservation, and disaster relief initiatives. Engaged in
-                                            leadership training and adventure scouting programs.</td>
-                                        <td>2024 - present</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Local Disaster Relief Team</td>
-                                        <td>Volunteer</td>
-                                        <td class="activity-description">Helped in flood relief operations by
-                                            distributing food, medical supplies, and shelter assistance.</td>
-                                        <td>2022 - present</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="biography-hobbies">
-                                <h2 class="mars-header"># Hobbies & Interests</h2>
-                                <div class="hobby-two-list">
-                                    <ul type="square" class="hobby-list">
-                                        <li>🎲 Board Games
-                                            <ul class="hobby-sublist">
-                                                <li>Chess</li>
-                                                <li>Poker</li>
-                                                <li>UNO</li>
-                                            </ul>
-                                        </li>
-                                        <li>👨🏻‍🍳 Culinary Arts
-                                            <ul class="hobby-sublist">
-                                                <li>Gourmet Cooking</li>
-                                                <li>Experimental Recipes</li>
-                                                <li>International Cuisine</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <ul class="hobby-list">
-                                        <li>⚽ Football Enthusiast
-                                            <ul class="hobby-sublist">
-                                                <li>Real Madrid</li>
-                                                <li>Tottenham Hotspur</li>
-                                                <li>Manchester City</li>
-                                            </ul>
-                                        </li>
-                                        <li>📖 Literature & Reading
-                                            <ul class="hobby-sublist">
-                                                <li>Science fiction</li>
-                                                <li>Mystery & Thriller</li>
-                                                <li>Classic Novels</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Education Page -->
-                <div class="education-page" id="education_page">
-                    <div class="education-container">
-                        <h2 class="mars-header"># EDUCATION</h2>
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Higher Secondary</span>
-                                    </h3>
-                                </div>
-                                <div class="education-details">
-                                    <table class="education-details-table">
-                                        <tr>
-                                            <td class="edu-det-info">Institution</td>
-                                            <td>: Motijheel Govt. Boys High School, Dhaka</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Subject/Major</td>
-                                            <td>: Science</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Session</td>
-                                            <td>: 2022-2023</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Overall Result</td>
-                                            <td>: GPA 5.00 out of GPA 5.00</td>
-                                        </tr>
-                                    </table>
-                                    <div class="result-sum">
-                                        <table class="result-table">
-                                            <th colspan="2">Highlighted Subjects' Result</th>
-                                            <tr>
-                                                <td>Subject</td>
-                                                <td>Grade (GPA)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Physics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chemistry</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Biology</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Higher Mathematics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Secondary School</span>
-                                    </h3>
-                                </div>
-                                <div class="education-details">
-                                    <table class="education-details-table">
-                                        <tr>
-                                            <td class="edu-det-info">Institution</td>
-                                            <td>: Rajdhani Ideal College, Dhaka</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Subject/Major</td>
-                                            <td>: Science</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Session</td>
-                                            <td>: 2020-2021</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Overall Result</td>
-                                            <td>: GPA 5.00 out of GPA 5.00</td>
-                                        </tr>
-                                    </table>
-                                    <div class="result-sum">
-                                        <table class="result-table">
-                                            <th colspan="2">Highlighted Subjects' Result</th>
-                                            <tr>
-                                                <td>Subject</td>
-                                                <td>Grade (GPA)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Physics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Chemistry</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Biology</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Higher Mathematics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <p class="subtitle">Website undergoing scheduled maintenance. Please stand by while I fix the known issues.
+            </p>
 
-                        <div class="education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Junior School</span>
-                                    </h3>
-                                </div>
-                                <div class="education-details">
-                                    <table class="education-details-table">
-                                        <tr>
-                                            <td class="edu-det-info">Institution</td>
-                                            <td>: Rajdhani Ideal College, Dhaka</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Subject/Major</td>
-                                            <td>: General</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Session</td>
-                                            <td>: 2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Overall Result</td>
-                                            <td>: GPA 5.00 out of GPA 5.00</td>
-                                        </tr>
-                                    </table>
-                                    <div class="result-sum">
-                                        <table class="result-table">
-                                            <th colspan="2">Highlighted Subjects' Result</th>
-                                            <tr>
-                                                <td>Subject</td>
-                                                <td>Grade (GPA)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>History</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>English</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>General Science</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mathematics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="terminal" aria-live="polite" aria-atomic="true">
+                <div class="line"><span class="prompt">$</span> <span id="type"></span><span class="caret"></span></div>
+            </div>
 
-                        <div class="education end-education">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Primary School</span>
-                                    </h3>
-                                </div>
-                                <div class="education-details">
-                                    <table class="education-details-table">
-                                        <tr>
-                                            <td class="edu-det-info">Institution</td>
-                                            <td>: Rajdhani Ideal College, Dhaka</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Subject/Major</td>
-                                            <td>: General</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Session</td>
-                                            <td>: 2016</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="edu-det-info">Overall Result</td>
-                                            <td>: GPA 5.00 out of GPA 5.00</td>
-                                        </tr>
-                                    </table>
-                                    <div class="result-sum">
-                                        <table class="result-table">
-                                            <th colspan="2">Highlighted Subjects' Result</th>
-                                            <tr>
-                                                <td>Subject</td>
-                                                <td>Grade (GPA)</td>
-                                            </tr>
-                                            <tr>
-                                                <td>History</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>English</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>General Science</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mathematics</td>
-                                                <td>5.00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <a class="btn" href="mailto:admin@example.com?subject=Notify%20me%20when%20you%27re%20back">✉ Contact
+                    me</a>
+                <a class="btn secondary" href="#"
+                    onclick="alert('Why don\'t you believe me when I said it will take time? Visit the website from laptop/pc')">↻
+                    Retry</a>
 
-                        <div class="notice">
-                            <p><span><b>Important Notice</b></span><br><br> The authenticity of the above information
-                                has
-                                been officially verified by the relevant institution, the Ministry of Education, and
-                                the Ministry of Foreign Affairs. However, due to institutional security policies and
-                                data protection regulations, digital copies of academic transcripts and certificates
-                                cannot be shared or uploaded online.<br><br>
-                                If you require access to these documents for academic or official purposes, please
-                                contact me via email using your institutional or official work email address. Kindly
-                                specify your credentials and the purpose of your request to facilitate a prompt and
-                                appropriate response.<br></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certificate Page -->
-                <div class="certificate-page" id="certificate_page">
-                    <div class="certificate-container">
-                        <h2 class="mars-header"># CERTIFICATIONS</h2>
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Cyber Security</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/cybersecurity.webp"
-                                        alt="Cyber Security Certificate | Nabil" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Responsive Web Design</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/responsiveweb.webp"
-                                        alt="Response Web Certificate | Nabil" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Professional Python</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/pythonpro.webp"
-                                        alt="Python professional Certificate | Nabil" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Python OOP</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/PythonOOP.webp" alt="Python OOP Certificate | Nabil"
-                                        height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Digital Marketing Specialist</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/digitalmarketing.webp"
-                                        alt="Digital Marketing Certificate | Nabil" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="certificate">
-                            <div class="card">
-                                <div class="education-level">
-                                    <h3>
-                                        <span class="h3-d1">📁</span>
-                                        |
-                                        <span class="h3-d2">Advent of Cyber23</span>
-                                    </h3>
-                                </div>
-                                <div class="certificate-img">
-                                    <img src="../../../src/img/cer/adventcyber2023.webp"
-                                        alt="Advent Cyber 2023 Certificate | Nabil" height="auto" width="100%">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skill Page -->
-                <div class="skill-page" id="skill_page">
-                    <div class="skill-container">
-                        <h2 class="mars-header"># SKILLS</h2>
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Python (Programming Language)</span>
-                                <span id="skillrating1">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress1"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Javascript (Programming Language)</span>
-                                <span id="skillrating2">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress2"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Object-Oriented Programming (OOP)</span>
-                                <span id="skillrating3">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress3"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Penetration Testing</span>
-                                <span id="skillrating4">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress4"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Reverse Engineering</span>
-                                <span id="skillrating5">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress5"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Social Engineering </span>
-                                <span id="skillrating6">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress6"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Cybersecurity</span>
-                                <span id="skillrating7">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress7"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Data Analysis</span>
-                                <span id="skillrating8">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress8"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Digital Marketing</span>
-                                <span id="skillrating9">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress9"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Community Administration</span>
-                                <span id="skillrating10">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress10"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Customer Support</span>
-                                <span id="skillrating11">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress11"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Search Engine Optimization (SEO)</span>
-                                <span id="skillrating12">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress12"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="skill-header">
-                                <span>Project Management</span>
-                                <span id="skillrating13">0 / 10</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" id="skillprogress13"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="progress" title="Uptime ETA">
+                    <svg width="86" height="86" viewBox="0 0 100 100" role="img" aria-label="Progress">
+                        <circle class="bg" cx="50" cy="50" r="38" fill="none" stroke-width="8"></circle>
+                        <circle class="fg" id="pg" cx="50" cy="50" r="38" fill="none" stroke-width="8"
+                            stroke-linecap="round" stroke-dasharray="238.76" stroke-dashoffset="238.76"></circle>
+                    </svg>
+                    <div class="label" id="pgLabel">0%</div>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>Visit the website from PC for better experience.</p>
-            <p>© 2025 Nabil Islam. All rights reserved.</p>
-            <p>Special thanks to @ecineves</p>
-        </div>
-    </div>
-    <script src="../../../src/js/scramble.js"></script>
-    <script src="./src/js/hrefpc.js"></script>
 
-    <script> 
-   const codeLines = [
-       "Establishing secure connection...",
-       "Fetching Nabil's information...",
-       "Trying to access the system...",
-   ];
+            <div class="status">
+                <span class="dot" aria-hidden="true"></span>
+                <span id="statusText">Initializing maintenance routine…</span>
+            </div>
+        </section>
+    </main>
 
-   const actualCodeSnippets = [
-       "ssh viewer@w3nabil.github.io -p 22",
-       "> sudo python3 whoisnabil.py",
-       "> sudo python3 access.py --username viewer --password ********",
-   ];
+    <footer style="text-align: center;">© <span id="year"></span> Nabil — <span style="color:var(--danger)">We see you
+            through the code.</span></footer>
 
-   const streamElement = document.getElementById("codeStream");
-   const webContent = document.getElementById("webContent");
-   let index = 0;
+    <script>
+        // ===== Matrix Rain Background =====
+        (function matrix() {
+            const c = document.getElementById('matrix'), ctx = c.getContext('2d');
+            const resize = () => { c.width = innerWidth; c.height = innerHeight; cols = Math.floor(c.width / 14); drops = Array(cols).fill(1); };
+            let cols = 0, drops = [];
+            const glyphs = "アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ$#*+/-";
+            const draw = () => {
+                ctx.fillStyle = "rgba(10,10,10,0.08)";
+                ctx.fillRect(0, 0, c.width, c.height);
+                ctx.fillStyle = "#20C20E";
+                ctx.font = "14px ui-monospace, monospace";
+                for (let i = 0; i < drops.length; i++) {
+                    const text = glyphs[Math.floor(Math.random() * glyphs.length)];
+                    ctx.fillText(text, i * 14, drops[i] * 14);
+                    if (drops[i] * 14 > c.height && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+                requestAnimationFrame(draw);
+            };
+            addEventListener('resize', resize, { passive: true });
+            resize(); draw();
+        })();
 
-   function typeText(text, element, callback) {
-       let i = 0;
-       const typingInterval = setInterval(() => {
-           if (i < text.length) {
-               element.textContent += text[i];
-               i++;
-           } else {
-               clearInterval(typingInterval);
-               if (callback) callback();
-           }
-       }, 10);
-   }
+        // ===== Typewriter Terminal =====
+        const lines = [
+            "auth: guest",
+            "connecting to node://maintenance/website/mobile/",
+            "status: fixing css bugs",
+            "eta: ~ 7 days"
+        ];
+        const typeEl = document.getElementById('type');
+        let idx = 0, sub = 0, line = 0;
+        function typeLoop() {
+            if (line < lines.length) {
+                const target = lines[line];
+                if (sub <= target.length) {
+                    typeEl.textContent = target.slice(0, sub++);
+                    setTimeout(typeLoop, 28 + Math.random() * 40);
+                } else {
+                    line++; sub = 0;
+                    setTimeout(typeLoop, 520);
+                    typeEl.insertAdjacentHTML('beforebegin', `<div class="line"><span class="prompt">$</span> ${target}</div>`);
+                    typeEl.textContent = "";
+                }
+            }
+        }
+        typeLoop();
 
-   function incrementPercentage(element, callback) {
-       let percent = 1;
-       const interval = setInterval(() => {
-           if (percent <= 100) {
-               const lines = element.textContent.split("\n");
-               lines[lines.length - 1] = lines[lines.length - 1].replace(/\d+%/, `${percent}%`);
-               element.textContent = lines.join("\n");
-               percent++;
-           } else {
-               clearInterval(interval);
-               if (callback) callback();
-           }
-       }, 1);
-   }
+        // ===== Circular Progress (fake ETA) =====
+        const pg = document.getElementById('pg');
+        const pgLabel = document.getElementById('pgLabel');
+        const circ = 2 * Math.PI * 38; // ~238.76
+        let p = 0;
+        const tick = () => {
+            p = Math.min(100, p + (Math.random() * 6 + 2)); // 2-8% per tick
+            const offset = circ * (1 - p / 100);
+            pg.style.strokeDashoffset = offset.toFixed(2);
+            pgLabel.textContent = `${Math.round(p)}%`;
+            document.getElementById('statusText').textContent =
+                p < 30 ? "Downloading dependencies…" :
+                    p < 60 ? "Applying patches…" :
+                        p < 90 ? "Recompiling assets…" :
+                            "Rebooting services…";
+            if (p < 100) setTimeout(tick, 600);
+            else document.getElementById('statusText').textContent = "Thank you for your patience…";
+        };
+        setTimeout(tick, 800);
 
-   function simulateHacking() {
-       if (index < codeLines.length) {
-           typeText(actualCodeSnippets[index] + "\n", streamElement, () => {
-               streamElement.textContent += codeLines[index] + " [1%]";
-               incrementPercentage(streamElement, () => {
-                   streamElement.textContent += "\n";
-                   index++;
-                   simulateHacking();
-               });
-           });
-       } else {
-           setTimeout(() => {
-               document.getElementById("loadingScreen").style.animation = "fadeOut 1s forwards";
-               setTimeout(() => {
-                   document.getElementById("accessGranted").style.display = "block";
-                   setTimeout(() => {
-                       document.getElementById("accessGranted").style.display = "none";
-                       document.getElementById("loadingScreen").style.display = "none";
-                       document.getElementById("webContent").style.display = "block";
-                   }, 1500);
-               }, 500);
-           }, 100);
-       }
-   }
-
-   simulateHacking();
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 
